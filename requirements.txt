@@ -1,0 +1,10 @@
+# CPU-only torch (no usable GPU on this machine); avoids the multi-GB CUDA wheels.
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch==2.7.1+cpu
+
+kokoro==0.9.4
+misaki[en]==0.9.4
+soundfile==0.13.1
+
+# spaCy English model used by misaki; pinned here so it isn't fetched at runtime.
+en_core_web_sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl
